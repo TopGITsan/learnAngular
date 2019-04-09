@@ -88,6 +88,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - and some!
 
  #### Lesson 2: Decorators introduction
- - What is a *decorator*
+ - What is a *decorator* - helps to wrap some function or a class inside another function
  - How it wraps code
  - Makes code easy to read and maintain
