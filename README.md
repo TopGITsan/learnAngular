@@ -101,9 +101,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - OnChanges - if you change some input property this fill be fired
  - OnInit - fired when the component is initialised, it's called only once for component, ideal if you retrive some data from some REST API (perform an HTTP req)
  - DoCheck - fired when angular thinks there is a change, something has changed
- 
+
  - AfterContentInit
  - AfterContentChecked
  - AfterViewInit
  - AfterViewChecked
  - OnDestroy
+
+
+ #### Lesson 4: Components
+ - What is a component - _a piece of code which represents something on your screen_. it's an independent thing which you can import an use it;
+ - Creating component using ng generate component
+ - Declaring a component
+ - Basic component use
