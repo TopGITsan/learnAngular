@@ -86,3 +86,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - Modules
  - Decorators
  - and some!
+
+ #### Lesson 2: Decorators introduction
+ - What is a *decorator*
+ - How it wraps code
+ - Makes code easy to read and maintain
