@@ -70,3 +70,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 35.  Getting Data from Redux Store
 
 ### [freeCodeCamp youtube video](https//github.com/mehulmpt/angular6-youtube﻿)
+
+
+#### Lesson 1: Arhitecture overview
+ - File structure
+    - e2e is for testing
+    - src (source folder)
+        - app (folder) has a css file , html file, ts file with a decorator, and a module file ( a module is a way to split your code to some independent files)
+        - main.ts is the entry point, initializes the angular project, bootstrap the application; (flow: main.ts is the main file which bootstraps the module which  bootstraps our components (a component has a decorator) which runs the html file through the template url and includes styles and acts on the selector [in our case <app-root> from our index.html file]).
+        - index.html has <app-root></app-root> which gives angular a place to start working
+        - polyfills - if the browser doesn't support a particular functionality then polyfill will mimic that particular functionality
+        - styles.css - is the global style sheet file
+ - Entry point of application
+ - Bootstrapping
+ - Modules
+ - Decorators
+ - and some!
