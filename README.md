@@ -96,3 +96,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - Class Decorators
  - Member Decorators
  _the decorator has to be followed by the class you can't have anything in between_
+
+ #### Lesson 3: Lifecycle Hooks
+ - OnChanges - if you change some input property this fill be fired
+ - OnInit - fired when the component is initialised, it's called only once for component, ideal if you retrive some data from some REST API (perform an HTTP req)
+ - DoCheck - fired when angular thinks there is a change, something has changed
+ 
+ - AfterContentInit
+ - AfterContentChecked
+ - AfterViewInit
+ - AfterViewChecked
+ - OnDestroy
