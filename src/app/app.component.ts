@@ -2,15 +2,26 @@ import { Component } from '@angular/core';
 
 function log(className) {
   console.log(className);
+  return (...args)=>{
+    console.log("Arguments passed to this class constructor are :" ,args);
+    return new className(...args); // return the initialization of the class itself
+  };
 }
+
+@log
+class myExampleClass {
+  constructor(arg1,arg2){
+    console.log("Constructor fired!");
+  }
+};
+
+const myClass = new myExampleClass(5,10);
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
-@log
 export class AppComponent {
   title = 'learnAngularTS';
 
