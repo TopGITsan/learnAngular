@@ -111,6 +111,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
  #### Lesson 4: Components
  - What is a component - _a piece of code which represents something on your screen_. it's an independent thing which you can import an use it;
- - Creating component using ng generate component
+ - Creating component using: ng generate component hello
  - Declaring a component
  - Basic component use
+
+
+ #### Lessong 5: Interpolation and Expressions
+ - What is interpolation
+ - Its symbol {{}}
+ - Expressions used in interpolation
+ - Prohibited expression syntax examples
