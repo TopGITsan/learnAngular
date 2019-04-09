@@ -91,3 +91,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - What is a *decorator* - helps to wrap some function or a class inside another function
  - How it wraps code
  - Makes code easy to read and maintain
+
+ #### Types of decorators
+ - Class Decorators
+ - Member Decorators
+ _the decorator has to be followed by the class you can't have anything in between_
