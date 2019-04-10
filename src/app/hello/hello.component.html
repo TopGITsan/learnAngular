@@ -4,4 +4,8 @@
 <p>This is a custom component.</p>
 <p>This is interpolation: {{myVar}}</p>
 <p>bitwiseOR 2|5= {{bitwiseOR}}</p>
-<p>Do some function: {{doSomeHeavyTask()}}</p>
+<!-- <p>Do some function: {{doSomeHeavyTask()}}</p>  --> 
+<!-- do not interpolate a function -->
+
+<label for="userInput">Enter some text:</label>
+<input type="text" name="userInput" id="userInput" value="{{myVariable}}">
