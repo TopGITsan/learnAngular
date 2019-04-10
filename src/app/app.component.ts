@@ -7,5 +7,5 @@ import { HelloComponent } from "./hello/hello.component";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "learnAngularTS";
+  title = "learn Angular";
 }
