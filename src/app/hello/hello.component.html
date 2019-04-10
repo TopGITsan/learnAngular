@@ -16,8 +16,12 @@
 <!-- create an event -->
 <button (click)="myFunction()">Hey there!</button>
 
-
+<p>Using built in directives for two way data binding</p>
 <label for="mirroring">Enter text to mirror:</label>
 <!-- two way data binding -->
 <input type="text" name="mirroring" id="mirroring" [value]="text" (input)="updateValue($event)">
 <p>{{text}}</p>
+
+<p>Using ngModel</p>
+<label for="mirrorModel">Enter text:</label>
+<input type="text" name="mirrorModel" id="mirrorModel" [(ngModel)]="ngText">
