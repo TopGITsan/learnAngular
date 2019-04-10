@@ -130,3 +130,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     - Meaning of two way data binding
     - Example of two way data binding
     - ngModel directive
+
+#### Lesson 7: *ngFor
+- Where to use: _ngFor is a directive that you can use in your Angular templates to loop through lists and arrays of data in order to display it._
+- Syntax
+- Getting index
+- Getting odd/even
+- Getting first element/last element

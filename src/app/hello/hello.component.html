@@ -4,12 +4,12 @@
 <p>This is a custom component.</p>
 <p>This is interpolation: {{myVar}}</p>
 <p>bitwiseOR 2|5= {{bitwiseOR}}</p>
-<!-- <p>Do some function: {{doSomeHeavyTask()}}</p>  --> 
+<!-- <p>Do some function: {{doSomeHeavyTask()}}</p>  -->
 <!-- do not interpolate a function -->
 
 <label for="userInput">Enter some text:</label>
-<input type="text" name="userInput" id="userInput" value="{{myVariable}}" [disabled]="myDisabled"> 
-<!-- interpolation vs property binding  --> 
+<input type="text" name="userInput" id="userInput" value="{{myVariable}}" [disabled]="myDisabled">
+<!-- interpolation vs property binding  -->
 <!-- with interpolation the input is allways disabled -->
 <!-- but when using property binding disabled takes its value from ts -->
 
@@ -26,3 +26,25 @@
 <label for="mirrorModel">Enter text:</label>
 <input type="text" name="mirrorModel" id="mirrorModel" [(ngModel)]="ngText">
 <p>{{ngText}}</p>
+
+<!-- ngFor -->
+<p>Using ngFor directive</p>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2">Data from TS</th>
+    </tr>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Online Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of data; let i=index; let evenUser = even; let oddUser = odd; let firstElem=first; let lastElem=last" [ngClass]="{odd: oddUser, even: evenUser, first: firstElem, last: lastElem}">
+      <td>{{i + 1}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.online}}</td>
+    </tr>
+  </tbody>
+</table>

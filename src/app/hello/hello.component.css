@@ -1,3 +1,21 @@
 p{
     text-align: center;
 }
+
+tr.even {
+    background: #eeee;
+    color: #000000
+}
+
+tr.odd {
+    background: #000000;
+    color: #eeee;
+}
+
+tr.first{
+    background: #0f0;
+}
+
+tr.last {
+    background: red;
+}

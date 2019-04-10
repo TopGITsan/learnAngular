@@ -13,7 +13,39 @@ export class HelloComponent implements OnInit {
   myVariable = 'app';
   myDisabled = false;
   text = 'text to mirror';
-  ngText = 'ngModel'
+  ngText = 'ngModel';
+
+  data = [
+    {
+      "name": "Top",
+      "online": true
+    },
+    {
+      "name": "camper",
+      "online": true
+    },
+    {
+      "name":"bot",
+      "online": true
+    },
+    {
+      "name": "XYZ",
+      "online": false
+    },
+    {
+      "name": "camper",
+      "online": true
+    },
+    {
+      "name":"bot",
+      "online": true
+    },
+    {
+      "name": "XYZ",
+      "online": false
+    }
+  ];
+
   constructor() { 
     
   }
