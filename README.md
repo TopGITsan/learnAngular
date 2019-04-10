@@ -120,4 +120,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - What is interpolation
  - Its symbol {{}}
  - Expressions used in interpolation
- - Prohibited expression syntax examples - _do not use functions in your html interpolations_
+ - Prohibited expression syntax examples - _do not use functions in your html interpolations_, *use only property names*
+
+ #### Lesson 6: Data Binding
+ - What is data binding
+ - Source to target -> []
+ - Target to source -> ()
+ - Two way data binding
