@@ -13,15 +13,17 @@ export class HelloComponent implements OnInit {
   myVariable = 'app';
   myDisabled = false;
   constructor() { 
-    setInterval(()=>{
-      this.myVariable = Math.floor(Math.random()*100).toString();
-      this.myDisabled = +this.myVariable > 50;
-    },1000)
+    
   }
 
   // doSomeHeavyTask() {
   //   console.log(`Called ${this.i++} times`)
   // }
+
+  myFunction(){
+    this.myDisabled = !this.myDisabled;
+    console.log("Button clicked!")
+  }
 
   ngOnInit() {
   }
