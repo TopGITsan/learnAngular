@@ -15,7 +15,7 @@ export class HelloComponent implements OnInit {
   constructor() { 
     setInterval(()=>{
       this.myVariable = Math.floor(Math.random()*100).toString();
-      this.myDisabled = Math.floor(Math.random()*100) > 50;
+      this.myDisabled = +this.myVariable > 50;
     },1000)
   }
 

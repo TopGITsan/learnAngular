@@ -8,6 +8,7 @@
 <!-- do not interpolate a function -->
 
 <label for="userInput">Enter some text:</label>
-<input type="text" name="userInput" id="userInput" value="{{myVariable}}" disabled={{myDisabled}}> 
+<input type="text" name="userInput" id="userInput" value="{{myVariable}}" [disabled]="myDisabled"> 
 <!-- interpolation vs property binding  --> 
 <!-- with interpolation the input is allways disabled -->
+<!-- but when using property binding disabled takes its value from ts -->
