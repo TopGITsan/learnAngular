@@ -127,3 +127,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - Source to target -> []
  - Target to source -> ()
  - Two way data binding
+    - Meaning of two way data binding
+    - Example of two way data binding
+    - ngModel directive
