@@ -13,5 +13,11 @@
 <!-- with interpolation the input is allways disabled -->
 <!-- but when using property binding disabled takes its value from ts -->
 
-<button (click)="myFunction()">Hey there!</button>
 <!-- create an event -->
+<button (click)="myFunction()">Hey there!</button>
+
+
+<label for="mirroring">Enter text to mirror:</label>
+<!-- two way data binding -->
+<input type="text" name="mirroring" id="mirroring" [value]="text" (input)="updateValue($event)">
+<p>{{text}}</p>

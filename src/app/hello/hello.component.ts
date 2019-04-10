@@ -12,6 +12,7 @@ export class HelloComponent implements OnInit {
   // i = 0;
   myVariable = 'app';
   myDisabled = false;
+  text = 'text to mirror';
   constructor() { 
     
   }
@@ -23,6 +24,11 @@ export class HelloComponent implements OnInit {
   myFunction(){
     this.myDisabled = !this.myDisabled;
     console.log("Button clicked!")
+  }
+
+  updateValue(event){
+    // console.log(event);
+    this.text = event.target.value;
   }
 
   ngOnInit() {
