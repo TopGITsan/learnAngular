@@ -13,6 +13,7 @@ export class HelloComponent implements OnInit {
   myVariable = 'app';
   myDisabled = false;
   text = 'text to mirror';
+  ngText = 'ngModel'
   constructor() { 
     
   }
