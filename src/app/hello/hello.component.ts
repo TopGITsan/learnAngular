@@ -12,6 +12,7 @@ export class HelloComponent implements OnInit {
   // i = 0;
   myVariable = 'app';
   myDisabled = false;
+  myButton = 'Disable';
   text = 'text to mirror';
   ngText = 'ngModel';
 
@@ -56,6 +57,7 @@ export class HelloComponent implements OnInit {
 
   myFunction(){
     this.myDisabled = !this.myDisabled;
+    this.myButton= this.myDisabled ? 'Enable' : 'Disable';
     console.log("Button clicked!")
   }
 
