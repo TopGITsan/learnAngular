@@ -131,9 +131,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     - Example of two way data binding
     - ngModel directive
 
-#### Lesson 7: *ngFor
-- Where to use: _ngFor is a directive that you can use in your Angular templates to loop through lists and arrays of data in order to display it._
-- Syntax
-- Getting index
-- Getting odd/even
-- Getting first element/last element
+
+ #### Lesson 7: *ngFor
+ - Where to use: _ngFor is a directive that you can use in your Angular templates to loop through lists and arrays of data in order to display it._
+ - Syntax
+ - Getting index
+ - Getting odd/even
+ - Getting first element/last element
+
+
+ #### Lesson 8: Services
+ - What are Services? _are substitutable objects that are wired together using dependency injection (DI)._ or a single instance of a file which can be injected in multiple components
+ - Why Services? _because you do not want your component to ex: call REST API, that what are services for_ that is what angular styling guides suggest
+ - Creating a service using command line: ng generate service [name]
+ - @Injectable decorator
+ - Injecting service in a component

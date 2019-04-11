@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 
+import { RecordsService } from './records.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,7 @@ import { HelloComponent } from './hello/hello.component';
     FormsModule
     // modules are independent piece of code, which run independent of each other
   ],
-  providers: [],
+  providers: [RecordsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
