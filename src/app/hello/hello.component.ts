@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+
 import { RecordsService } from '../records.service';
+import { ApidataService } from '../apidata.service';
+
+interface myData{
+  username: string;
+  ID: string;
+}
 
 @Component({
   selector: 'app-hello',
@@ -49,8 +56,9 @@ export class HelloComponent implements OnInit {
   ];
 
   records = [];
+  apiData: myData[] = [];
 
-  constructor(private myFirstService: RecordsService) { 
+  constructor(private myFirstService: RecordsService, private dataAPI:ApidataService) { 
     
   }
 
@@ -70,7 +78,13 @@ export class HelloComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.records = this.myFirstService.getData()
+    this.records = this.myFirstService.getData();
+    this.dataAPI.getData()
+    // use RxJS to handle asyncronous data req; is based on a pipe-line model
+      .subscribe((datas:myData[]) =>{
+        this.apiData = [...datas];
+        // console.log("Data saved:", this.apiData)
+      });
   }
 
 }

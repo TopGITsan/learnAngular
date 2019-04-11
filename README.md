@@ -146,3 +146,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - Creating a service using command line: ng generate service [name]
  - @Injectable decorator
  - Injecting service in a component
+
+ #### Lesson 9: HTTP Requests
+ - What is HTTP Client
+ - Creating a service for making HTTP Requests
+ - Getting response back
+ - Casting response to interface
+ - RxJS
