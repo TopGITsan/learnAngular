@@ -153,3 +153,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - Getting response back
  - Casting response to interface
  - RxJS
+
+ #### Lesson 10: Proxy Configuration 
+ <!-- for development purposes -->
+ <!-- now -->
+ | Angular 4200 | --> makes an API call --> | API Server https://*glitch.com/api/exercise/users |
+ <!-- after -->
+ | Angular 4200 | --> makes an API call to /api/exercise/users --> webpack dev server --> | API Server https://*glitch.com/api/exercise/users |
+ - create proxyconfig.json { "/route" : { "target: ..."}}
+ - change the package.json{ scripts.start } :
+> ng serve --proxy-config proxyconfig.json
+ - change the url in the service with the /route
+ - run npm start
