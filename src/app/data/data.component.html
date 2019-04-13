@@ -1,0 +1,79 @@
+<p>
+  data works!
+</p>
+
+<ul class="nav">
+  <li>
+    <a routerLink="/">Home of Angular</a>
+  </li>
+  <li>
+    <a routerLink="/hello">Hello from Angular</a>
+  </li>
+  <li>
+      <a class="active"  routerLink="/data">Working with data</a>
+  </li>
+</ul>
+
+<!-- ngFor -->
+<p>Using data from TS file for ngFor directive</p>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2">Data from TS</th>
+    </tr>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Online Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of data; let i=index; let evenUser = even; let oddUser = odd; let firstElem=first; let lastElem=last" [ngClass]="{odd: oddUser, even: evenUser, first: firstElem, last: lastElem}">
+      <td>{{i + 1}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.online}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Using data from a service</p>
+<table>
+    <thead>
+      <tr>
+        <th colspan="2">Data from service</th>
+      </tr>
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Online Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of records; let i=index; let evenUser = even; let oddUser = odd; let firstElem=first; let lastElem=last" [ngClass]="{odd: oddUser, even: evenUser, first: firstElem, last: lastElem}">
+        <td>{{i + 1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.online}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Using data from an API</p>
+  <table>
+      <thead>
+        <tr>
+          <th colspan="2">Data from service</th>
+        </tr>
+        <tr>
+          <th>No.</th>
+          <th>User Name</th>
+          <th>User ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of apiData; let i=index; let evenUser = even; let oddUser = odd; let firstElem=first; let lastElem=last" [ngClass]="{odd: oddUser, even: evenUser, first: firstElem, last: lastElem}">
+          <td>{{i + 1}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.ID}}</td>
+        </tr>
+      </tbody>
+    </table>

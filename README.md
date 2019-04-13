@@ -165,3 +165,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 > ng serve --proxy-config proxyconfig.json
  - change the url in the service with the /route
  - run npm start
+
+ #### Lesson 11: Routing
+ - What is Routing?
+   - displaying different content and different pages
+   - need routing for displaying large amount of content in chunks on the website, or for creating special authorized access-only pages.
+ - Why Routing?
+ - Implementing Router Module fron @angular/router
+ - Adding Routes
