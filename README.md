@@ -196,3 +196,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 #### Lesson 14: Getting data from backend
 - Creating session in backend
 - Getting data for a user
+
+#### Lesson 15: Keeping sessions alive
+- local storage
+- remote server access

@@ -12,15 +12,18 @@ interface myData {
 export class AuthService {
 
   loggedInStatus = false;
+  // private loggedInStatus = JSON.parse(localStorage.getItem('loggedIn') || 'false')
 
   constructor(private http: HttpClient) { }
 
   setLoggedIn(value: boolean){
     this.loggedInStatus = value;
+    // localStorage.setItem('loggedIn','true');
   }
 
   get isLoggedIn(){
-    return this.loggedInStatus
+    return this.loggedInStatus;
+    // return JSON.parse(localStorage.getItem('loggedIn') || this.loggedInStatus.toString());
   }
 
   getUserDetails(username,password){
