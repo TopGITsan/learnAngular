@@ -1,3 +1,9 @@
-<p>
-  login works!
-</p>
+<div class="section">
+  <form (submit)="loginUser($event)">
+    <label for="user">Username</label>
+    <input id="user" type="text" placeholder="Username">
+    <label for="pwd">Password</label>
+    <input id="pwd" type="password" placeholder="Password">
+    <input type="submit" value="Login">
+  </form>
+</div>

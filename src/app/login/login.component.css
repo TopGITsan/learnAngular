@@ -1,0 +1,36 @@
+.section {
+    height: auto;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.section form {
+    padding-top: 18vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+form label {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+form input {
+    font-size: 1.7rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    margin: 0.7rem;
+    padding: 0.5rem;
+    box-shadow: 10px 10px 10px grey;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+    color: white;
+}
