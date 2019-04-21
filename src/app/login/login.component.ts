@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../auth.service";
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,27 +10,28 @@ import { AuthService } from "../auth.service";
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private Auth: AuthService) { }
+  constructor(private Auth: AuthService, private router:Router) { }
 
   ngOnInit() {
   }
 
-  loginUser(evet) {
+  loginUser(event) {
     event.preventDefault();
 
     const target = event.target as HTMLElement;
     const username = (target.querySelector('#user') as HTMLInputElement).value;
     const password = (target.querySelector('#user') as HTMLInputElement).value;
 
-    this.Auth.getUserDetails(username,password).subscribe((data:any) =>{
+    this.Auth.getUserDetails(username,password).subscribe(data =>{
       if(data.success) {
         // redirect the user to /admin
+        this.router.navigate(['admin']);
+        this.Auth.setLoggedIn(true);
       } else {
         window.alert("Invalid credentials");
       }
     })
     console.log(username, password);
   }
-
 
 }

@@ -48,6 +48,8 @@ import { AuthGuard } from "./auth.guard";
         path: 'admin',
         component: AdminComponent,
         canActivate: [AuthGuard]
+        // canActivate: [AuthGuard && SomeOtherRouteGuard && ...]
+        // can be added multiple routes, so if one fails others will check
       },
       {
         path: '',
