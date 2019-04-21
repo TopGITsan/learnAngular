@@ -39,6 +39,14 @@ import { AdminComponent } from './admin/admin.component';
         component: HelloComponent
       },
       {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'admin',
+        component: AdminComponent
+      },
+      {
         path: '',
         component: HomeComponent
       }
