@@ -191,3 +191,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - CanDeactivate : if a route will be used by a user really quickly,so you don't want to deactivate the routes component. Not secure if you do all the route protection on frontend!
 - Resolve : is used to resolve the data before the user actually sees the route. use it to get data from the API server
 - CanLoad : Lazy check first if the user is eligible to see the route. _first checks then loads the component_.
+
+
+#### Lesson 14: Getting data from backend
+- Creating session in backend
+- Getting data for a user

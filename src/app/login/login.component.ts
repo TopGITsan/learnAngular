@@ -23,12 +23,13 @@ export class LoginComponent implements OnInit {
     const password = (target.querySelector('#user') as HTMLInputElement).value;
 
     this.Auth.getUserDetails(username,password).subscribe(data =>{
-      if(data.success) {
+      if(data && data.success) {
         // redirect the user to /admin
         this.router.navigate(['admin']);
         this.Auth.setLoggedIn(true);
       } else {
         window.alert("Invalid credentials");
+        this.Auth.setLoggedIn(false);
       }
     })
     console.log(username, password);
