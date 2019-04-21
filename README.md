@@ -173,3 +173,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
  - Why Routing?
  - Implementing Router Module fron @angular/router
  - Adding Routes
+
+
+
+### Login App
+- App Comonents
+      - Login Component
+      - Admin Component
+- Backend Validation
+- Routing
+- Route protection

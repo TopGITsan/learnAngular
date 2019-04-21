@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 
 import { RecordsService } from './records.service';
 import { ApidataService } from './apidata.service';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -19,7 +21,9 @@ import { ApidataService } from './apidata.service';
     AppComponent,
     HelloComponent,
     DataComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
