@@ -176,10 +176,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-### Login App
+### Lesson 12: Login App
 - App Comonents
       - Login Component
       - Admin Component
 - Backend Validation
 - Routing
 - Route protection
+   -Route Guards
+
+#### Lesson 13: Route Guards
+- CanActivate : check is the user is eligible to see a route. protects one route, /admin. _first load the components then checks if eligible_
+- CanActivateChild : will protect /admin/*
+- CanDeactivate : if a route will be used by a user really quickly,so you don't want to deactivate the routes component
+- Resolve : is used to resolve the data before the user actually sees the route. use it to get data from the API server
+- CanLoad : Lazy check first if the user is eligible to see the route. _first checks then loads the component_.

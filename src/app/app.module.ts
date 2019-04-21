@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { DataComponent } from './data/data.component';
 import { HomeComponent } from './home/home.component';
-
-import { RecordsService } from './records.service';
-import { ApidataService } from './apidata.service';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 
+import { RecordsService } from './records.service';
+import { ApidataService } from './apidata.service';
+import { AuthService } from "./auth.service";
+
+import { AuthGuard } from "./auth.guard";
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { AdminComponent } from './admin/admin.component';
       },
       {
         path: 'admin',
-        component: AdminComponent
+        component: AdminComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: '',
@@ -53,7 +56,7 @@ import { AdminComponent } from './admin/admin.component';
     ])
     // modules are independent piece of code, which run independent of each other
   ],
-  providers: [RecordsService,ApidataService],
+  providers: [RecordsService,ApidataService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
