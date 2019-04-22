@@ -7,7 +7,9 @@ interface myData {
 }
 
 interface registerResponse{
-  success: boolean
+  success: boolean,
+  message: string
+
 }
 
 @Injectable({
