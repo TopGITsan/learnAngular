@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     const password = (target.querySelector('#pwd') as HTMLInputElement).value;
 
     this.Auth.getUserDetails(username,password).subscribe(data =>{
-      if(data && data.success) {
+      if(data.success) {
         // redirect the user to /admin
         this.router.navigate(['admin']);
         this.Auth.setLoggedIn(true);
