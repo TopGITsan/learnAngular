@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
     const target = event.target as HTMLElement;
     const username = (target.querySelector('#user') as HTMLInputElement).value;
-    const password = (target.querySelector('#user') as HTMLInputElement).value;
+    const password = (target.querySelector('#pwd') as HTMLInputElement).value;
 
     this.Auth.getUserDetails(username,password).subscribe(data =>{
       if(data && data.success) {
