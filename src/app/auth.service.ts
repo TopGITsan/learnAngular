@@ -34,7 +34,7 @@ export class AuthService {
     // post these details to API server and return user info if correct
     // enter the url of the server
     // the server checks users input 
-    return this.http.post<myData>('[url]',{
+    return this.http.post<myData>('/api/login',{
       username,
       password
     })
