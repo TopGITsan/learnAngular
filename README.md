@@ -204,3 +204,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 #### Lesson 16: Finish the app
 - UI
 - Logout
+
+#### Registration
+- Requires frontend
+- Requires validation
+- Requires backend
+- Data for user to edit
+

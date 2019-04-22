@@ -35,4 +35,13 @@ export class AuthService {
       password
     })
   }
+
+  registerUser(username,password,cpassword){
+    return this.http.post('/api/register',{
+      username,
+      password,
+      cpassword
+    })
+  }
+  // for security reasons you need to implement captcha
 }
