@@ -6,6 +6,10 @@ interface myData {
   message: string
 }
 
+interface registerResponse{
+  success: boolean
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -36,11 +40,10 @@ export class AuthService {
     })
   }
 
-  registerUser(username,password,cpassword){
-    return this.http.post('/api/register',{
+  registerUser(username,password){
+    return this.http.post<registerResponse>('/api/register',{
       username,
-      password,
-      cpassword
+      password
     })
   }
   // for security reasons you need to implement captcha
