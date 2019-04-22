@@ -10,12 +10,16 @@ import { DataComponent } from './data/data.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
 
 import { RecordsService } from './records.service';
 import { ApidataService } from './apidata.service';
 import { AuthService } from "./auth.service";
 
 import { AuthGuard } from "./auth.guard";
+
+
 
 
 @NgModule({
@@ -25,7 +29,9 @@ import { AuthGuard } from "./auth.guard";
     DataComponent,
     HomeComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    DashboardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +56,14 @@ import { AuthGuard } from "./auth.guard";
         canActivate: [AuthGuard]
         // canActivate: [AuthGuard && SomeOtherRouteGuard && ...]
         // can be added multiple routes, so if one fails others will check
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
       },
       {
         path: '',
