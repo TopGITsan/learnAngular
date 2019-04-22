@@ -205,9 +205,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - UI
 - Logout
 
-#### Registration
+#### Lesson 17: Registration
 - Requires frontend
 - Requires validation
 - Requires backend
 - Data for user to edit
 
+#### Lesson 18: MongoDB Setup
+- installing mongodb
+- Installing mongoose
+- Setting up schema
+
+#### Lesson 18: Connect Angular to Mongo
+- Ajax Calls
+- Login Functionality
+- Register Functionality
