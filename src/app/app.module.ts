@@ -9,7 +9,7 @@ import { HelloComponent } from './hello/hello.component';
 import { DataComponent } from './data/data.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { AdminComponent } from './admin/admin.component';
+// import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 
@@ -29,7 +29,7 @@ import { AuthGuard } from "./auth.guard";
     DataComponent,
     HomeComponent,
     LoginComponent,
-    AdminComponent,
+    // AdminComponent,
     DashboardComponent,
     RegisterComponent
   ],
@@ -50,16 +50,17 @@ import { AuthGuard } from "./auth.guard";
         path: 'login',
         component: LoginComponent
       },
-      {
-        path: 'admin',
-        component: AdminComponent,
-        canActivate: [AuthGuard]
-        // canActivate: [AuthGuard && SomeOtherRouteGuard && ...]
-        // can be added multiple routes, so if one fails others will check
-      },
+      // {
+      //   path: 'admin',
+      //   component: AdminComponent,
+      //   canActivate: [AuthGuard]
+      //   // canActivate: [AuthGuard && SomeOtherRouteGuard && ...]
+      //   // can be added multiple routes, so if one fails others will check
+      // },
       {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'register',
