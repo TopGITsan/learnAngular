@@ -6,6 +6,20 @@ interface myData{
   message: string
 }
 
+interface isLoggedIn{
+  status: boolean
+}
+
+interface logoutStatus{
+  success: boolean
+}
+
+interface userData{
+  email: string,
+  status: boolean,
+  quote: string
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,5 +29,17 @@ export class UserService {
 
   getSomeData(){
     return this.http.get<myData>('/api/login')
+  }
+
+  getData(){
+    return this.http.get<userData>('/api/datac')
+  }
+
+  isLoggedIn(){
+    return this.http.get<isLoggedIn>('/api/isloggedin');
+  }
+
+  logout(){
+    return this.http.get<logoutStatus>('/api/logout');
   }
 }
