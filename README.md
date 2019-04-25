@@ -220,3 +220,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Ajax Calls
 - Login Functionality
 - Register Functionality
+
+#### Lesson 19: Use of user sessions
+- Implementing Express Sessions
+- Implementing login check on Angular
