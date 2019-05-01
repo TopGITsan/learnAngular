@@ -3,4 +3,9 @@
   <h2>User: {{email}}</h2>
   <h3>Qoute: {{quote}}</h3>
   <a routerLink="/logout">Logout</a>
+  <div id="controls">
+    <label for="myQuote">Enter your favourite quote:</label>
+    <input type="text" name="myQoute" id="myQoute">
+    <input type="button" value="Update Quote" (click)="updateQuote($event)">
+  </div>
 </div>
