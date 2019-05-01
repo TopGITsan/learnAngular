@@ -224,3 +224,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 #### Lesson 19: Use of user sessions
 - Implementing Express Sessions
 - Implementing login check on Angular
+
+#### Lesson 20: 
+- Editable text field (user can update data in db)
+
+
