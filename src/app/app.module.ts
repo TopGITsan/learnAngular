@@ -12,13 +12,13 @@ import { LoginComponent } from './login/login.component';
 // import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
+import { LogoutComponent } from './logout/logout.component';
 
 import { RecordsService } from './records.service';
 import { ApidataService } from './apidata.service';
 import { AuthService } from "./auth.service";
 
 import { AuthGuard } from "./auth.guard";
-
 
 
 
@@ -31,7 +31,8 @@ import { AuthGuard } from "./auth.guard";
     LoginComponent,
     // AdminComponent,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +66,10 @@ import { AuthGuard } from "./auth.guard";
       {
         path: 'register',
         component: RegisterComponent
+      },
+      {
+        path: 'logout',
+        component: LogoutComponent
       },
       {
         path: '',
