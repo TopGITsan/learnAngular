@@ -20,6 +20,10 @@ interface userData{
   quote: string
 }
 
+interface quoteStatus{
+  success: boolean
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -41,5 +45,11 @@ export class UserService {
 
   logout(){
     return this.http.get<logoutStatus>('/api/logout');
+  }
+
+  updateQuote(value){
+    return this.http.post<quoteStatus>('/api/quote',{
+      value
+    });
   }
 }
