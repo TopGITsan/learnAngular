@@ -16,6 +16,8 @@ export class HelloComponent implements OnInit {
   text = 'text to mirror';
   ngText = 'ngModel';
 
+  amount = 103
+
   constructor() { 
   }
 
