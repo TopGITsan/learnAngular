@@ -49,8 +49,13 @@
 <input type="text" name="mirrorModel" id="mirrorModel" [(ngModel)]="ngText">
 <p>{{ngText}}</p>
 
-<h3>Using pipes</h3>
+<h3>Using inbuilt pipes</h3>
 <div>
   <p>Somebody owes me {{amount | currency: format}}</p>
   <button (click)="toggleCurrency()">Change to {{currency}}</button>
 </div>
+
+<h3>Using custom pipes</h3>
+<p>This is a test string</p>
+<br>
+<p>This is another test {{"string" | reverse: true : "dot" }}</p>
