@@ -20,6 +20,7 @@ import { AuthService } from "./auth.service";
 
 import { AuthGuard } from "./auth.guard";
 import { ReversePipe } from './reverse.pipe';
+import { RedBlackDirective } from './red-black.directive';
 
 
 
@@ -34,7 +35,8 @@ import { ReversePipe } from './reverse.pipe';
     DashboardComponent,
     RegisterComponent,
     LogoutComponent,
-    ReversePipe
+    ReversePipe,
+    RedBlackDirective
   ],
   imports: [
     BrowserModule,
