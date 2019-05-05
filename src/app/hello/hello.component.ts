@@ -23,6 +23,9 @@ export class HelloComponent implements OnInit {
   checkVar = true;
 
   constructor() { 
+    setInterval(()=>{
+      this.checkVar = !this.checkVar;
+    },10000);
   }
 
 
