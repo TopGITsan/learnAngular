@@ -10,11 +10,11 @@ h3,p{
     background-color: #333;
 }
 
-li {
+.nav li {
     float: left;
 }
 
-li a {
+.nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -23,10 +23,21 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+.nav li a:hover {
     background-color: #111;
 }
 
 .active {
     background-color: #4CAF50;
+}
+
+
+.javascript {
+    background-color: yellow;
+    color: black;
+}
+
+.swift {
+    background-color: black;
+    color: rgba(255, 0, 0, 0.884);
 }

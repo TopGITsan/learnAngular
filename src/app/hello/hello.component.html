@@ -79,3 +79,14 @@
 <h4>ngNonBindable</h4>
 <p>Interpolation</p>
 <p>Interpolation is a way that angular uses to display variables inside HTML using the curly braces. You can display a var <b>name</b> using <span ngNonBindable>{{ name }}</span></p>
+
+<h4>ngClass</h4>
+<ul>
+  <li *ngFor="let info of data">
+    <span [ngClass]="{
+      'javascript': info.lang === 'JavaScript',
+      'swift': info.lang === 'Swift'
+        }">{{info.lang}}</span> 
+    is mostly used on {{info.usedOn}}
+  </li>
+</ul>

@@ -22,6 +22,17 @@ export class HelloComponent implements OnInit {
 
   checkVar = true;
 
+  data = [
+    {
+      lang: "JavaScript",
+      usedOn: 'web development'
+    },
+    {
+      lang: "Swift",
+      usedOn: "IOS"
+    }
+  ];
+
   constructor() { 
     setInterval(()=>{
       this.checkVar = !this.checkVar;
