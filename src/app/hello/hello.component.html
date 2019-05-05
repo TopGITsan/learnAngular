@@ -51,5 +51,6 @@
 
 <h3>Using pipes</h3>
 <div>
-  <p>Somebody owes me {{amount | currency: 'EUR'}}</p>
+  <p>Somebody owes me {{amount | currency: format}}</p>
+  <button (click)="toggleCurrency()">Change to {{currency}}</button>
 </div>

@@ -16,7 +16,9 @@ export class HelloComponent implements OnInit {
   text = 'text to mirror';
   ngText = 'ngModel';
 
-  amount = 103
+  private actualAmountInEUR =128;
+  EUR = true;
+  currency = "USD"
 
   constructor() { 
   }
@@ -34,6 +36,19 @@ export class HelloComponent implements OnInit {
   updateValue(event){
     // console.log(event);
     this.text = event.target.value;
+  }
+
+  get amount(){
+    return this.EUR ? this.actualAmountInEUR : this.actualAmountInEUR*1.12
+  }
+
+  get format(){
+    return this.EUR ? 'EUR' : 'USD';
+  }
+
+  toggleCurrency(){
+    this.EUR = !this.EUR;
+    this.currency= this.EUR ? 'USD' : 'EUR';
   }
 
   ngOnInit() {
