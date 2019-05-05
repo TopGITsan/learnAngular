@@ -61,4 +61,11 @@
 <p>This is another test {{"string" | reverse: true : "dot" }}</p>
 
 <h3>Using inbuilt directives</h3>
-<div *ngIf="2>1">Yes! 2 is greater than 1</div>
+<div *ngIf="2>1">Use *ngIf. Yes! 2 is greater than 1</div>
+<div *ngIf="checkVar;then trueBlockContent else falseBlockContent"></div>
+<ng-template #falseBlockContent>
+  <h4>Display if false</h4>
+</ng-template>
+<ng-template #trueBlockContent>
+    <h4>Display if true</h4>
+  </ng-template>

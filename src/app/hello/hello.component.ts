@@ -20,12 +20,11 @@ export class HelloComponent implements OnInit {
   EUR = true;
   currency = "USD"
 
+  checkVar = true;
+
   constructor() { 
   }
 
-  // doSomeHeavyTask() {
-  //   console.log(`Called ${this.i++} times`)
-  // }
 
   myFunction(){
     this.myDisabled = !this.myDisabled;
