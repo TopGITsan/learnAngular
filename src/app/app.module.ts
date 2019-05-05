@@ -19,6 +19,7 @@ import { ApidataService } from './apidata.service';
 import { AuthService } from "./auth.service";
 
 import { AuthGuard } from "./auth.guard";
+import { ReversePipe } from './reverse.pipe';
 
 
 
@@ -32,7 +33,8 @@ import { AuthGuard } from "./auth.guard";
     // AdminComponent,
     DashboardComponent,
     RegisterComponent,
-    LogoutComponent
+    LogoutComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
