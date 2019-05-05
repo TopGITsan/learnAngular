@@ -228,4 +228,30 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 #### Lesson 20: 
 - Editable text field (user can update data in db)
 
+#### Lesson 21: Pipes
+- Inbuilt pipes {{ variable | pipe1:option1:option2:option3... | pipe2}}
+    - Date
+    - UpperCase
+    - LowerCase
+    - Currency {{ var | currency[:currencyCode[:display[:digitInfo[:locale]]]] }}
+    - Percent
+- Custom pipes
+    - Creating custom pipe: ng generate pipe
+    - Rransforming the value
+    - Returning the new value
+    - Accepting arguments
 
+#### Lesson 22: Directives
+- What are directives ?
+    - Add custom behavior to your HTML
+    - Basically, these are attributes of your HTML tag
+- Inbuilt directives: 
+    - *ngFor 
+    - *ngIf
+    - ngSwitch
+    - ngNonBindable
+    - ngClass
+    - ...
+- Custom directives
+    - Creating a custom directive
+    - Hacking the DOM element
