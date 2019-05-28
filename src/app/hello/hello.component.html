@@ -94,3 +94,36 @@
 <h3>Custom directives</h3>
 <p>This is a normal paragraph</p>
 <p appRedBlack>This is a custom directive</p>
+
+<h3>Reactive Forms</h3>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" name="name" placeholder="Enter your name" id="name" formControlName='name'>
+    
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="text" name="email" placeholder="Enter your email" id="email" formControlName='email'>
+    
+  </div>
+  <div>
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Subject" formControlName="subject">
+    
+  </div>
+  <div>
+    <label for="message">Message:</label>
+    <textarea name="message" id="message" placeholder="Your Message" formControlName="message"></textarea>
+  </div>
+
+  <div formArrayName="hobbies"> 
+    <button type="button">Add Hobby</button>
+    <div *ngFor="let hobbyControl of this.contactForm.get('hobbies');  let i=index">
+      <input type="text" [formControlName]="i">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-large">Send Message</button>
+</form>

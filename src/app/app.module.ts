@@ -21,7 +21,9 @@ import { AuthService } from "./auth.service";
 import { AuthGuard } from "./auth.guard";
 import { ReversePipe } from './reverse.pipe';
 import { RedBlackDirective } from './red-black.directive';
-
+// Reactive Forms
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 
 @NgModule({
@@ -42,6 +44,8 @@ import { RedBlackDirective } from './red-black.directive';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path: 'data',
