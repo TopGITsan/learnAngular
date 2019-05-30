@@ -16,14 +16,17 @@ import { LogoutComponent } from './logout/logout.component';
 
 import { RecordsService } from './records.service';
 import { ApidataService } from './apidata.service';
-import { AuthService } from "./auth.service";
+import { AuthService } from './auth.service';
 
-import { AuthGuard } from "./auth.guard";
+import { AuthGuard } from './auth.guard';
 import { ReversePipe } from './reverse.pipe';
 import { RedBlackDirective } from './red-black.directive';
 // Reactive Forms
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { NameEditorComponent } from './name-editor/name-editor.component'; 
 
 
 @NgModule({
@@ -38,7 +41,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RegisterComponent,
     LogoutComponent,
     ReversePipe,
-    RedBlackDirective
+    RedBlackDirective,
+    NameEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -86,7 +90,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ])
     // modules are independent piece of code, which run independent of each other
   ],
-  providers: [RecordsService,ApidataService, AuthService, AuthGuard],
+  providers: [RecordsService, ApidataService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

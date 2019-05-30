@@ -92,5 +92,5 @@ export class HelloComponent implements OnInit {
   public addHobby() {
     (<FormArray>this.contactForm.get("hobbies")).push(new FormControl(null));
   }
-  
+
 }

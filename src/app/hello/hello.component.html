@@ -118,12 +118,15 @@
     <textarea name="message" id="message" placeholder="Your Message" formControlName="message"></textarea>
   </div>
 
-  <div formArrayName="hobbies"> 
+  <!-- <div formArrayName="hobbies"> 
     <button type="button">Add Hobby</button>
     <div *ngFor="let hobbyControl of this.contactForm.get('hobbies');  let i=index">
       <input type="text" [formControlName]="i">
     </div>
-  </div>
+  </div> -->
 
   <button type="submit" class="btn btn-large">Send Message</button>
+  
+  <h3>Reactive Forms</h3>
+  <app-name-editor></app-name-editor>
 </form>

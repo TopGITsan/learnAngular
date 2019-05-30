@@ -1,0 +1,29 @@
+<label>
+  Name:
+  <input type="text" [formControl]="name">
+</label>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+<p>
+  NickName: {{ name.value }}
+</p>
+<p>
+  First Name: {{ profileForm.value.firstName }}
+</p>
+<p>
+  Last Name: {{ profileForm.value.lastName }}
+</p>
+<div>
+  <button (click)="updateName()">Update NickName</button>
+</div>
