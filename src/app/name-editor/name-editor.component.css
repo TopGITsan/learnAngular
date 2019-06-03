@@ -54,3 +54,6 @@
   flex-direction: column;
 }
 
+#firstNameFB:invalid,#lastNameFB:invalid, #streetFB:invalid, #cityFB:invalid, #stateFB:invalid, #zipFB:invalid  {
+  box-shadow: 0px 0px 4px red;
+}

@@ -52,3 +52,44 @@
 <div>
   <button (click)="updateName()">Update NickName</button>
 </div>
+
+<form id="profile" [formGroup]="profileFormFB" (ngSubmit)="onSubmit()">
+  <h2>Profile : Using Form Builder</h2>
+  <label>
+    First Name:
+    <input id='firstNameFB' type="text" formControlName="firstName" minlength="7" required>
+  </label>
+
+  <label>
+    Last Name:
+    <input id='lastNameFB' type="text" formControlName="lastName" minlength="7">
+  </label>
+  <div formGroupName="address" id="address">
+    <h3>Address</h3>
+
+    <label>
+      Street:
+      <input id='streetFB' type="text" formControlName="street" minlength="7">
+    </label>
+
+    <label>
+      City:
+      <input id='cityFB' type="text" formControlName="city" minlength="7">
+    </label>
+
+    <label>
+      State:
+      <input id='stateFB' type="text" formControlName="state" minlength="2">
+    </label>
+
+    <label>
+      Zip Code:
+      <input id='zipFB' type="number" formControlName="zip">
+    </label>
+  </div>
+  <p>
+    Form Status: {{ profileFormFB.status }}
+  </p>
+  <button id="update" (click)="updateProfileFB()">Update Profile</button>
+  <button type="submit" [disabled]="!profileFormFB.valid">Submit- {{profileFormFB.status}}</button>
+</form>

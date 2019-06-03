@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-name-editor',
@@ -18,7 +19,18 @@ export class NameEditorComponent implements OnInit {
       zip: new FormControl('', [Validators.required, Validators.minLength(5)])
     })
   });
-  constructor() { }
+
+  profileFormFB = this.fb.group({
+    firstName: ['', Validators.required],
+    lastName: [''],
+    address: this.fb.group({
+      street: [''],
+      city: [''],
+      state: [''],
+      zip: ['']
+    }),
+  });
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }
