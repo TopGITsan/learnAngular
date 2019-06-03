@@ -9,8 +9,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class NameEditorComponent implements OnInit {
   name = new FormControl('');
   profileForm = new FormGroup({
-    firstName: new FormControl('', [Validators.required,Validators.minLength(2)]),
+    firstName: new FormControl('', [Validators.required, Validators.minLength(5)]),
     lastName: new FormControl('', [Validators.required, Validators.minLength(4)]),
+    address: new FormGroup({
+      street: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      city: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      state: new FormControl('', [Validators.required, Validators.minLength(2)]),
+      zip: new FormControl('', [Validators.required, Validators.minLength(5)])
+    })
   });
   constructor() { }
 
@@ -24,6 +30,15 @@ export class NameEditorComponent implements OnInit {
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn(this.profileForm.value);
+  }
+
+  updateProfile() {
+    this.profileForm.patchValue({
+      firstName: 'Nancy',
+      address: {
+        street: '123 Drew Street'
+      }
+    });
   }
 
 }

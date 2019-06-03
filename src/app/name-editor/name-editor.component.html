@@ -2,16 +2,41 @@
   Name:
   <input type="text" [formControl]="name">
 </label>
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<form id="profile" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <h2>Profile</h2>
   <label>
     First Name:
-    <input type="text" formControlName="firstName">
+    <input id='firstName' type="text" formControlName="firstName" minlength="5">
   </label>
 
   <label>
     Last Name:
-    <input type="text" formControlName="lastName">
+    <input id='lastName' type="text" formControlName="lastName" minlength="4">
   </label>
+  <div formGroupName="address" id="address">
+    <h3>Address</h3>
+
+    <label>
+      Street:
+      <input id='street' type="text" formControlName="street" minlength="5">
+    </label>
+
+    <label>
+      City:
+      <input id='city' type="text" formControlName="city" minlength="3">
+    </label>
+
+    <label>
+      State:
+      <input id='state' type="text" formControlName="state" minlength="2">
+    </label>
+
+    <label>
+      Zip Code:
+      <input id='zip' type="number" formControlName="zip">
+    </label>
+  </div>
+  <button id="update" (click)="updateProfile()">Update Profile</button>
   <button type="submit" [disabled]="!profileForm.valid">Submit</button>
 </form>
 
