@@ -87,9 +87,40 @@
       <input id='zipFB' type="number" formControlName="zip">
     </label>
   </div>
+  <div formArrayName="aliases">
+    <h3>Aliases</h3> <button (click)="addAlias()">Add Alias</button>
+
+    <div *ngFor="let address of aliases.controls; let i=index">
+      <!-- The repeated alias template -->
+      <label for="i">
+        Alias:
+        <input id="i" type="text" [formControlName]="i">
+      </label>
+    </div>
+  </div>
   <p>
     Form Status: {{ profileFormFB.status }}
   </p>
   <button id="update" (click)="updateProfileFB()">Update Profile</button>
   <button type="submit" [disabled]="!profileFormFB.valid">Submit- {{profileFormFB.status}}</button>
 </form>
+
+<p>Use validators in reactive forms</p>
+<form id="hero" [formGroup]="heroForm">
+  <h2>Hero Form</h2>
+  <div class="inputContainer">
+    <label for="heroName">Name:</label>
+    <input type="text" id="heroName" formControlName="name" required
+      [class.bad]="heroForm.get('name').invalid && (heroName.dirty || heroName.touched)">
+    <!-- <div *ngIf="heroName.errors.required">Name is required.</div> -->
+    <!-- <div *ngIf="heroName.errors.minlength">Name must be at least 4 characters long.</div> -->
+  </div>
+  <div class="inputContainer">
+    <label for="heroAlterEgo">Ego:</label>
+    <input type="text" id="heroAlterEgo" formControlName="alterEgo">
+  </div>
+  <div class="inputContainer">
+    <label for="heroPower">Power:</label>
+    <input type="text" id="heroPower" formControlName="power">
+  </div>
+  </form>

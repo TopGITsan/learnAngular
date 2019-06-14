@@ -2,7 +2,11 @@
   box-shadow: 0px 0px 4px red;
 }
 
-#profile {
+.bad {
+  box-shadow: 0px 0px 4px red;
+}
+
+#profile, #hero {
   margin: 10px;
   padding: 10px;
   width: 300px;
@@ -39,6 +43,17 @@
 #profile label {
   margin: 10px 15px 10px 25px;
   color: blueviolet;
+}
+
+.inputContainer {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.inputContainer input {
+  width: 100%;
+  height: 20px;
+  padding: 2px 4px;
 }
 
 #profile input {
